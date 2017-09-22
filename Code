@@ -1,0 +1,20 @@
+---<Code>---
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerMovement : MonoBehaviour {
+	Rigidbody me;
+	float Speed;
+	float Rotation;
+
+	void Start () {
+		me = gameObject.GetComponent<Rigidbody> ();
+	}
+
+	void Update () {
+		Rotation += Time.deltaTime * -5;
+		transform.rotation = Quaternion.Euler(0,0,Speed);
+	}
+}
