@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	void Update () {
 		Rotation += Time.deltaTime * -5;
+		Speed = Speed + Rotation;
 		transform.rotation = Quaternion.Euler(0,0,Speed);
 	}
 }
